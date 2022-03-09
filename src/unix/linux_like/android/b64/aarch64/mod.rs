@@ -55,6 +55,13 @@ s! {
         pub pc: u64,
         pub pstate: u64,
     }
+
+    #[cfg(libc_int128)]
+    pub struct user_fpsimd_struct {
+        pub vregs: [::__uint128_t; 32],
+        pub fpsr: u32,
+        pub fpcr: u32,
+    }
 }
 
 pub const O_DIRECT: ::c_int = 0x10000;
