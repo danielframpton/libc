@@ -56,6 +56,13 @@ s! {
         pub pstate: ::c_ulonglong,
     }
 
+    #[cfg(libc_int128)]
+    pub struct user_fpsimd_struct {
+        pub vregs: [::__uint128_t; 32],
+        pub fpsr: ::c_uint,
+        pub fpcr: ::c_uint,
+    }
+
     pub struct ipc_perm {
         pub __ipc_perm_key: ::key_t,
         pub uid: ::uid_t,
