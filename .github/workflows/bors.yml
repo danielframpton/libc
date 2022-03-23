@@ -1,10 +1,7 @@
 name: CI (bors)
 
 on:
-  push:
-    branches:
-      - auto-libc
-      - try
+  push
 
 jobs:
   docker_linux_tier1:
