@@ -113,7 +113,7 @@ jobs:
           i686-linux-android,
           i686-unknown-linux-musl,
           mips-unknown-linux-gnu,
-          mips-unknown-linux-musl,
+          # mips-unknown-linux-musl,
           # FIXME: Somehow failed on CI
           # https://github.com/rust-lang/libc/runs/1659882216
           # mips64-unknown-linux-gnuabi64,
