@@ -1,30 +1,9 @@
 pub type c_char = i8;
 pub type wchar_t = i32;
+pub type stat64 = stat;
 
 s! {
     pub struct stat {
-        pub st_dev: ::dev_t,
-        __st_dev_padding: ::c_int,
-        __st_ino_truncated: ::c_long,
-        pub st_mode: ::mode_t,
-        pub st_nlink: ::nlink_t,
-        pub st_uid: ::uid_t,
-        pub st_gid: ::gid_t,
-        pub st_rdev: ::dev_t,
-        __st_rdev_padding: ::c_int,
-        pub st_size: ::off_t,
-        pub st_blksize: ::blksize_t,
-        pub st_blocks: ::blkcnt_t,
-        pub st_atime: ::time_t,
-        pub st_atime_nsec: ::c_long,
-        pub st_mtime: ::time_t,
-        pub st_mtime_nsec: ::c_long,
-        pub st_ctime: ::time_t,
-        pub st_ctime_nsec: ::c_long,
-        pub st_ino: ::ino_t,
-    }
-
-    pub struct stat64 {
         pub st_dev: ::dev_t,
         __st_dev_padding: ::c_int,
         __st_ino_truncated: ::c_long,
